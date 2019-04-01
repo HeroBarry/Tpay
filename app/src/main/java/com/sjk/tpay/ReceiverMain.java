@@ -19,7 +19,7 @@ import java.util.Set;
  * @ QQ群：524901982
  */
 public class ReceiverMain extends BroadcastReceiver {
-    private static String lastMsg = "";//防止重启接收广播，一定要用static
+//    private static String lastMsg = "";//防止重启接收广播，一定要用static
 
     //本地广播的任务列表
     public static HashMap<String, CallBackDo> mLocalTaskMap = new HashMap<>();
@@ -27,12 +27,12 @@ public class ReceiverMain extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
-        String data = intent.getStringExtra(HookBase.RECV_ACTION_DATE) + intent.getStringExtra(HookBase.RECV_ACTION_TYPE);
-        if (lastMsg.contentEquals(data)) {
-            return;
-        } else {
-            lastMsg = data;
-        }
+//        String data = intent.getStringExtra(HookBase.RECV_ACTION_DATE) + intent.getStringExtra(HookBase.RECV_ACTION_TYPE);
+//        if (lastMsg.contentEquals(data)) {
+//            return;
+//        } else {
+//            lastMsg = data;
+//        }
 
         try {
             String type = intent.getStringExtra(HookBase.RECV_ACTION_TYPE);
